@@ -18,4 +18,13 @@ public class Alt_karakter : MonoBehaviour
     {
         _NavMesh.SetDestination(Target.transform.position);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("igneliKutu"))
+        {
+            gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AnlikKarakterSayisi--;            
+        }
+    }
 }

@@ -135,12 +135,16 @@ public class GameManager : MonoBehaviour
                         }
                     }
 
-                    //if (true)
-                    //{
+                    if (AnlikKarakterSayisi % 2 == 0)
+                    {
+                        AnlikKarakterSayisi /= 2;
+                    }
+                    else
+                    {
+                        AnlikKarakterSayisi /= 2;
+                        AnlikKarakterSayisi++;
 
-                    //}
-
-                    AnlikKarakterSayisi /= 2;                    
+                    }
                 }
                 break;
         }

@@ -28,8 +28,8 @@ public class Karakter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "x2" || other.name == "+3" || other.name == "-4" || other.name == "/2")       
-            gameManager.Adamyonetimi(other.name, other.transform);
+        if (other.CompareTag("Carpma") || other.CompareTag("Toplama") || other.CompareTag("Cikartma") || other.CompareTag("Bolme"))       
+            gameManager.Adamyonetimi(other.tag, int.Parse(other.name), other.transform);
         
     }
 }

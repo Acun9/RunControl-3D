@@ -39,5 +39,12 @@ public class Alt_karakter : MonoBehaviour
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
             gameObject.SetActive(false);
         }
+        if (other.CompareTag("Balyoz"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz, true); // alttaki satýr ve fonks yerýne balyozu parametre olarak cek
+            //GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AdamLekesiOlustur(yeniPoz);
+            gameObject.SetActive(false);
+        }
     }
 }

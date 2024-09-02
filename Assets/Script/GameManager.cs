@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Karakterler;
     public List<GameObject> OlusmaEfektleri;
     public List<GameObject> YokOlmaEfektleri;
+    public List<GameObject> AdamLekesiEfektleri;
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    public void YokOlmaEfektiOlustur(Vector3 pozisyon)
+    public void YokOlmaEfektiOlustur(Vector3 pozisyon, bool Balyoz = false)
     {
         foreach (var item in YokOlmaEfektleri)
         {
@@ -57,5 +58,33 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
-    }    
+
+        if (Balyoz)
+        {
+            Vector3 yeniPoz = new Vector3(pozisyon.x, .005f, pozisyon.z);
+            foreach (var item in AdamLekesiEfektleri)
+            {
+                if (!item.activeInHierarchy)
+                {
+                    item.transform.position = yeniPoz;
+                    item.SetActive(true);
+                    break;
+                }
+            }
+        }
+    }
+    //public void AdamLekesiOlustur(Vector3 pozisyon)
+    //{
+    //    foreach (var item in AdamLekesiEfektleri)
+    //    {
+    //        if (!item.activeInHierarchy)
+    //        {
+    //            item.transform.position = pozisyon;
+    //            item.SetActive(true);
+    //            item.GetComponent <ParticleSystem>().Play(); 
+    //            AnlikKarakterSayisi--;
+    //            break;
+    //        }
+    //    }
+    //}
 }

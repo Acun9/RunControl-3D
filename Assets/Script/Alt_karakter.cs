@@ -21,29 +21,16 @@ public class Alt_karakter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("igneliKutu"))
+        if (other.CompareTag("igneliKutu") || other.CompareTag("Testere") || other.CompareTag("PervaneIgneleri"))
         {
             Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
             gameObject.SetActive(false);
-        }
-        if (other.CompareTag("Testere"))
-        {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
-            gameObject.SetActive(false);
-        }
-        if (other.CompareTag("PervaneIgneleri"))
-        {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
-            gameObject.SetActive(false);
-        }
+        }        
         if (other.CompareTag("Balyoz"))
         {
             Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz, true); // alttaki satýr ve fonks yerýne balyozu parametre olarak cek
-            //GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().AdamLekesiOlustur(yeniPoz);
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz, true);
             gameObject.SetActive(false);
         }
     }

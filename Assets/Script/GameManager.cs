@@ -72,19 +72,5 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-    }
-    //public void AdamLekesiOlustur(Vector3 pozisyon)
-    //{
-    //    foreach (var item in AdamLekesiEfektleri)
-    //    {
-    //        if (!item.activeInHierarchy)
-    //        {
-    //            item.transform.position = pozisyon;
-    //            item.SetActive(true);
-    //            item.GetComponent <ParticleSystem>().Play(); 
-    //            AnlikKarakterSayisi--;
-    //            break;
-    //        }
-    //    }
-    //}
+    }    
 }

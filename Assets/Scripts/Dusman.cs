@@ -14,14 +14,14 @@ public class Dusman : MonoBehaviour
     {
         navMesh = GetComponent<NavMeshAgent>();
     }
-    void AnimasyonTetikle()
+    public void AnimasyonTetikle()
     {
-        GetComponent<Animator>().SetBool("Saldir",true);
+        GetComponent<Animator>().SetBool("Saldir", true);
         saldiriHali = true;
     }
     void LateUpdate()
     {
         if (saldiriHali)
-        navMesh.SetDestination(saldiriHedefi.transform.position);
+            navMesh.SetDestination(saldiriHedefi.transform.position);
     }
 }

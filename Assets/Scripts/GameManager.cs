@@ -13,9 +13,31 @@ public class GameManager : MonoBehaviour
     public List<GameObject> YokOlmaEfektleri;
     public List<GameObject> AdamLekesiEfektleri;
 
+    [Header("=====> Level Verileri <=====")]
+    public List<GameObject> Dusmanlar;
+    public int KacDusmanOlsun;
+
+
     void Start()
     {
-
+        DusmanOlustur();
+    }
+    public void DusmanOlustur()
+    {
+        for (int i = 0; i < KacDusmanOlsun; i++)
+        {
+            Dusmanlar[i].SetActive(true);
+        }
+    }
+    public void DusmanTetikle()
+    {
+        foreach (var item in Dusmanlar)
+        {
+            if (item.activeInHierarchy)
+            {
+                item.GetComponent<Dusman>().AnimasyonTetikle();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -29,7 +51,7 @@ public class GameManager : MonoBehaviour
         switch (islemTuru)
         {
             case "Carpma":
-                Matematik›slemleri.Carpma(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);                
+                Matematik›slemleri.Carpma(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);
                 break;
 
             case "Toplama":
@@ -37,7 +59,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Cikartma":
-                Matematik›slemleri.Cikartma(gelenSayi, Karakterler, YokOlmaEfektleri);                
+                Matematik›slemleri.Cikartma(gelenSayi, Karakterler, YokOlmaEfektleri);
                 break;
 
             case "Bolme":
@@ -72,5 +94,5 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-    }    
+    }
 }

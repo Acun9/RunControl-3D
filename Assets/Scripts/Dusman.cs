@@ -24,4 +24,13 @@ public class Dusman : MonoBehaviour
         if (saldiriHali)
             navMesh.SetDestination(saldiriHedefi.transform.position);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("AltKarakter"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz,false,true);
+            gameObject.SetActive(false);
+        }
+    }
 }

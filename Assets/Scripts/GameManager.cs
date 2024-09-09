@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Acun;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject VarisNoktasi;
+    public GameObject AnaKarakter;
     public static int AnlikKarakterSayisi = 1;
 
     public List<GameObject> Karakterler;
@@ -16,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("=====> Level Verileri <=====")]
     public List<GameObject> Dusmanlar;
     public int KacDusmanOlsun;
+    public bool OyunBittiMi;
 
 
     void Start()
@@ -45,6 +48,39 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    void SavasDurumu()
+    {
+        if (AnlikKarakterSayisi == 1 || KacDusmanOlsun == 0)
+        {
+            OyunBittiMi = true;
+            foreach(var item in Dusmanlar)
+            {
+                if (item.activeInHierarchy)
+                {
+                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                }
+            }
+            foreach (var item in Karakterler)
+            {
+                if (item.activeInHierarchy)
+                {
+                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                }
+            }
+
+            AnaKarakter.GetComponent<Animator>().SetBool("Saldir", false );
+
+            if (AnlikKarakterSayisi > KacDusmanOlsun)
+            {
+                Debug.Log("Kazandin.");
+            }
+            else
+            {
+                Debug.Log("Kaybettin.");
+
+            }
+        }
+    }
 
     public void Adamyonetimi(string islemTuru, int gelenSayi, Transform pozisyon)
     {
@@ -67,7 +103,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    public void YokOlmaEfektiOlustur(Vector3 pozisyon, bool Balyoz = false)
+    public void YokOlmaEfektiOlustur(Vector3 pozisyon, bool Balyoz = false, bool Durum = false)
     {
         foreach (var item in YokOlmaEfektleri)
         {
@@ -76,7 +112,10 @@ public class GameManager : MonoBehaviour
                 item.transform.position = pozisyon;
                 item.SetActive(true);
                 item.GetComponent<ParticleSystem>().Play();
-                AnlikKarakterSayisi--;
+                if (!Durum)
+                    AnlikKarakterSayisi--;
+                else
+                    KacDusmanOlsun--;
                 break;
             }
         }
@@ -93,6 +132,10 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
+        }
+        if (!OyunBittiMi)
+        {
+            SavasDurumu();
         }
     }
 }

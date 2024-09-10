@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1182319028061818045}
   - component: {fileID: 4347055864427633892}
   - component: {fileID: 86813920620243542}
+  - component: {fileID: 1760069919}
   m_Layer: 0
   m_Name: igne.010
   m_TagString: PervaneIgneleri
@@ -95,6 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &1760069919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86813920620243543}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &377656037457093376
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +124,7 @@ GameObject:
   - component: {fileID: 5379954209627382270}
   - component: {fileID: 1341841363503830517}
   - component: {fileID: 377656037457093379}
+  - component: {fileID: 181767891}
   m_Layer: 0
   m_Name: igne.006
   m_TagString: PervaneIgneleri
@@ -190,6 +208,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &181767891
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377656037457093376}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1465120697684805265
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +236,7 @@ GameObject:
   - component: {fileID: 5066822409748808452}
   - component: {fileID: 2296525528884974767}
   - component: {fileID: 1465120697684805264}
+  - component: {fileID: 436687150}
   m_Layer: 0
   m_Name: igne.014
   m_TagString: PervaneIgneleri
@@ -285,6 +320,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0, z: -0.000000014901161}
+--- !u!54 &436687150
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465120697684805265}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2517505956766790799
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +348,7 @@ GameObject:
   - component: {fileID: 9035239585149947526}
   - component: {fileID: 1862817696471430518}
   - component: {fileID: 2517505956766790798}
+  - component: {fileID: 2044489068}
   m_Layer: 0
   m_Name: igne.013
   m_TagString: PervaneIgneleri
@@ -380,6 +432,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0, z: -0.000000014901161}
+--- !u!54 &2044489068
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517505956766790799}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2526056644588581880
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +460,7 @@ GameObject:
   - component: {fileID: 7777818113001497823}
   - component: {fileID: 3117957858971719231}
   - component: {fileID: 2526056644588581883}
+  - component: {fileID: 1071828249}
   m_Layer: 0
   m_Name: igne.001
   m_TagString: PervaneIgneleri
@@ -475,6 +544,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0.0000000055879354, z: -0.000000014901161}
+--- !u!54 &1071828249
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526056644588581880}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2546450766539193530
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +572,7 @@ GameObject:
   - component: {fileID: 7038660019429143435}
   - component: {fileID: 5871525215783513527}
   - component: {fileID: 2546450766539193525}
+  - component: {fileID: 1081765469}
   m_Layer: 0
   m_Name: igne.007
   m_TagString: PervaneIgneleri
@@ -570,6 +656,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0, z: -0.000000014901161}
+--- !u!54 &1081765469
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546450766539193530}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2948649157340697666
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2948649157340697661
 Transform:
   m_ObjectHideFlags: 0
@@ -739,6 +841,7 @@ GameObject:
   - component: {fileID: 3773167175976813419}
   - component: {fileID: 2017099807492078298}
   - component: {fileID: 5643973654470769336}
+  - component: {fileID: 242786674}
   m_Layer: 0
   m_Name: igne.008
   m_TagString: PervaneIgneleri
@@ -822,6 +925,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0, z: -0.000000014901161}
+--- !u!54 &242786674
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5643973654470769337}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5653109232481885897
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1070,7 @@ GameObject:
   - component: {fileID: 8009926719696590046}
   - component: {fileID: 7323781618831092265}
   - component: {fileID: 5724424131185482352}
+  - component: {fileID: 1039026748}
   m_Layer: 0
   m_Name: igne.011
   m_TagString: PervaneIgneleri
@@ -1034,6 +1154,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &1039026748
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724424131185482353}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6096222321815752264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1182,7 @@ GameObject:
   - component: {fileID: 7302310655268360059}
   - component: {fileID: 3363502970282504630}
   - component: {fileID: 6096222321815752267}
+  - component: {fileID: 1697750765}
   m_Layer: 0
   m_Name: igne.012
   m_TagString: PervaneIgneleri
@@ -1129,6 +1266,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &1697750765
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096222321815752264}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6757147713885824006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1572,7 @@ GameObject:
   - component: {fileID: 7898076925699722815}
   - component: {fileID: 6572038627530212156}
   - component: {fileID: 7760588190212337498}
+  - component: {fileID: 238573257}
   m_Layer: 0
   m_Name: igne.002
   m_TagString: PervaneIgneleri
@@ -1502,6 +1656,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0.0000000055879354, z: -0.000000014901161}
+--- !u!54 &238573257
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760588190212337499}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8031661839401038312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1684,7 @@ GameObject:
   - component: {fileID: 7221130992803631015}
   - component: {fileID: 1564573876432439893}
   - component: {fileID: 8031661839401038315}
+  - component: {fileID: 1241924546}
   m_Layer: 0
   m_Name: igne.004
   m_TagString: PervaneIgneleri
@@ -1597,6 +1768,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0.0000000055879354, z: -0.000000014901161}
+--- !u!54 &1241924546
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8031661839401038312}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8392821026718924305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1796,7 @@ GameObject:
   - component: {fileID: 8464814731498375058}
   - component: {fileID: 7778194932447128952}
   - component: {fileID: 8392821026718924304}
+  - component: {fileID: 1134827435}
   m_Layer: 0
   m_Name: igne.005
   m_TagString: PervaneIgneleri
@@ -1692,6 +1880,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0.0000000055879354, z: -0.000000014901161}
+--- !u!54 &1134827435
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392821026718924305}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8395634803080838094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1908,7 @@ GameObject:
   - component: {fileID: 3769689173794118812}
   - component: {fileID: 5612348577235499120}
   - component: {fileID: 8395634803080838089}
+  - component: {fileID: 95719226}
   m_Layer: 0
   m_Name: igne.003
   m_TagString: PervaneIgneleri
@@ -1787,6 +1992,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0.0000009536743, y: 0.0000000055879354, z: -0.000000014901161}
+--- !u!54 &95719226
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395634803080838094}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8988764339779612625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +2020,7 @@ GameObject:
   - component: {fileID: 5531810655017991626}
   - component: {fileID: 1039331132952393442}
   - component: {fileID: 8988764339779612624}
+  - component: {fileID: 512139310}
   m_Layer: 0
   m_Name: igne.009
   m_TagString: PervaneIgneleri
@@ -1882,6 +2104,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &512139310
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988764339779612625}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &9136366770946467072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +2132,7 @@ GameObject:
   - component: {fileID: 3020839286909613102}
   - component: {fileID: 2714471679918647429}
   - component: {fileID: 9136366770946467075}
+  - component: {fileID: 147281168}
   m_Layer: 0
   m_Name: igne.015
   m_TagString: PervaneIgneleri
@@ -1977,6 +2216,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000005, y: 0.020000001, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!54 &147281168
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136366770946467072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &9162732448619937856
 GameObject:
   m_ObjectHideFlags: 0

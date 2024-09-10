@@ -5,7 +5,7 @@ using Acun;
 using UnityEditor;
 
 public class GameManager : MonoBehaviour
-{    
+{
     public GameObject AnaKarakter;
     public static int AnlikKarakterSayisi = 1;
 
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Dusmanlar;
     public int DusmanSayisi;
     public bool OyunBittiMi;
+    bool karakterSonaGeldiMi;
 
 
     void Start()
@@ -40,43 +41,47 @@ public class GameManager : MonoBehaviour
                 item.GetComponent<Dusman>().AnimasyonTetikle();
             }
         }
+        karakterSonaGeldiMi = true;
+        SavasDurumu();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
     void SavasDurumu()
     {
-        if (AnlikKarakterSayisi == 1 || DusmanSayisi == 0)
+        if (karakterSonaGeldiMi)
         {
-            OyunBittiMi = true;
-            foreach(var item in Dusmanlar)
+            if (AnlikKarakterSayisi == 1 || DusmanSayisi == 0)
             {
-                if (item.activeInHierarchy)
+                OyunBittiMi = true;
+                foreach (var item in Dusmanlar)
                 {
-                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                    if (item.activeInHierarchy)
+                    {
+                        item.GetComponent<Animator>().SetBool("Saldir", false);
+                    }
                 }
-            }
-            foreach (var item in Karakterler)
-            {
-                if (item.activeInHierarchy)
+                foreach (var item in Karakterler)
                 {
-                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                    if (item.activeInHierarchy)
+                    {
+                        item.GetComponent<Animator>().SetBool("Saldir", false);
+                    }
                 }
-            }
 
-            AnaKarakter.GetComponent<Animator>().SetBool("Saldir", false );
+                AnaKarakter.GetComponent<Animator>().SetBool("Saldir", false);
 
-            if (AnlikKarakterSayisi > DusmanSayisi)
-            {
-                Debug.Log("Kazandin.");
-            }
-            else
-            {
-                Debug.Log("Kaybettin.");
+                if (AnlikKarakterSayisi > DusmanSayisi)
+                {
+                    Debug.Log("Kazandin.");
+                }
+                else
+                {
+                    Debug.Log("Kaybettin.");
 
+                }
             }
         }
     }

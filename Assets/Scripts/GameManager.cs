@@ -5,8 +5,7 @@ using Acun;
 using UnityEditor;
 
 public class GameManager : MonoBehaviour
-{
-    public GameObject VarisNoktasi;
+{    
     public GameObject AnaKarakter;
     public static int AnlikKarakterSayisi = 1;
 
@@ -17,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("=====> Level Verileri <=====")]
     public List<GameObject> Dusmanlar;
-    public int KacDusmanOlsun;
+    public int DusmanSayisi;
     public bool OyunBittiMi;
 
 
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
     }
     public void DusmanOlustur()
     {
-        for (int i = 0; i < KacDusmanOlsun; i++)
+        for (int i = 0; i < DusmanSayisi; i++)
         {
             Dusmanlar[i].SetActive(true);
         }
@@ -50,7 +49,7 @@ public class GameManager : MonoBehaviour
     }
     void SavasDurumu()
     {
-        if (AnlikKarakterSayisi == 1 || KacDusmanOlsun == 0)
+        if (AnlikKarakterSayisi == 1 || DusmanSayisi == 0)
         {
             OyunBittiMi = true;
             foreach(var item in Dusmanlar)
@@ -70,7 +69,7 @@ public class GameManager : MonoBehaviour
 
             AnaKarakter.GetComponent<Animator>().SetBool("Saldir", false );
 
-            if (AnlikKarakterSayisi > KacDusmanOlsun)
+            if (AnlikKarakterSayisi > DusmanSayisi)
             {
                 Debug.Log("Kazandin.");
             }
@@ -115,7 +114,7 @@ public class GameManager : MonoBehaviour
                 if (!Durum)
                     AnlikKarakterSayisi--;
                 else
-                    KacDusmanOlsun--;
+                    DusmanSayisi--;
                 break;
             }
         }

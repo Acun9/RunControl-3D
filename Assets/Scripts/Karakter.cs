@@ -5,7 +5,7 @@ using UnityEngine;
 public class Karakter : MonoBehaviour
 {
     public GameManager gameManager;
-    public GameObject kamera;
+    public Kamera kamera;
     public bool karakterSonaGeldiMi;
     public GameObject karakterinGidecegiYer;
 
@@ -15,7 +15,6 @@ public class Karakter : MonoBehaviour
             transform.Translate(Vector3.forward * .5f * Time.deltaTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (karakterSonaGeldiMi)
@@ -46,7 +45,7 @@ public class Karakter : MonoBehaviour
             gameManager.Adamyonetimi(other.tag, int.Parse(other.name), other.transform);
         else if (other.CompareTag("SonTetikleyici"))
         {
-            kamera.GetComponent<Kamera>().kameraSonaGeldiMi = true;
+            kamera.kameraSonaGeldiMi = true;
             karakterSonaGeldiMi = true;
             gameManager.DusmanTetikle();
         }

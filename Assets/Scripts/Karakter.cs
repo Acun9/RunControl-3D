@@ -49,6 +49,10 @@ public class Karakter : MonoBehaviour
             karakterSonaGeldiMi = true;
             gameManager.DusmanTetikle();
         }
+        else if (other.CompareTag("BosKarakter"))
+        {
+            gameManager.Karakterler.Add(other.gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

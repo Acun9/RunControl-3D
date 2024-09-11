@@ -31,15 +31,19 @@ public class Alt_karakter : MonoBehaviour
             gameManager.YokOlmaEfektiOlustur(PozisyonVer());
             gameObject.SetActive(false);
         }
-        if (other.CompareTag("Balyoz"))
+        else if (other.CompareTag("Balyoz"))
         {
             gameManager.YokOlmaEfektiOlustur(PozisyonVer(), true);
             gameObject.SetActive(false);
         }
-        if (other.CompareTag("Dusman"))
+        else if (other.CompareTag("Dusman"))
         {
             gameManager.YokOlmaEfektiOlustur(PozisyonVer(), false, false);
             gameObject.SetActive(false);
+        }
+        else if (other.CompareTag("BosKarakter"))
+        {
+            gameManager.Karakterler.Add(other.gameObject);
         }
     }
 }

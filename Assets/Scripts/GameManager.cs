@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
                 item.transform.position = pozisyon;
                 item.SetActive(true);
                 item.GetComponent<ParticleSystem>().Play();
+                item.GetComponent<AudioSource>().Play();
                 if (!Durum)
                     AnlikKarakterSayisi--;
                 else

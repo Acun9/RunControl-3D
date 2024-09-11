@@ -23,6 +23,7 @@ namespace Acun
                                 item1.SetActive(true);
                                 item1.transform.position = pozisyon.position;
                                 item1.GetComponent<ParticleSystem>().Play();
+                                item1.GetComponent<AudioSource>().Play();
                                 break;
                             }
                         }
@@ -57,6 +58,7 @@ namespace Acun
                                 item1.SetActive(true);
                                 item1.transform.position = pozisyon.position;
                                 item1.GetComponent<ParticleSystem>().Play();
+                                item1.GetComponent<AudioSource>().Play();
                                 break;
                             }
                         }
@@ -90,6 +92,8 @@ namespace Acun
                             item1.SetActive(true);
                             item1.transform.position = yeniPoz;
                             item1.GetComponent<ParticleSystem>().Play();
+                            item1.GetComponent<AudioSource>().Play();
+
                             break;
                         }
                     }
@@ -152,6 +156,7 @@ namespace Acun
                             item1.SetActive(true);
                             item1.transform.position = yeniPoz;
                             item1.GetComponent<ParticleSystem>().Play();
+                            item1.GetComponent<AudioSource>().Play();
                             break;
                         }
                     }
@@ -163,7 +168,7 @@ namespace Acun
 
             }
             else
-            {   
+            {
                 int bolum = GameManager.AnlikKarakterSayisi / gelenSayi;
                 int kalan = GameManager.AnlikKarakterSayisi % gelenSayi;
                 int donguSayisi = GameManager.AnlikKarakterSayisi - (bolum + kalan);
@@ -182,6 +187,7 @@ namespace Acun
                                     item1.SetActive(true);
                                     item1.transform.position = yeniPoz;
                                     item1.GetComponent<ParticleSystem>().Play();
+                                    item1.GetComponent<AudioSource>().Play();
                                     break;
                                 }
                             }

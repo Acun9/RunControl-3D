@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Progress;
 
 
 public class BosKarakter : MonoBehaviour
@@ -31,7 +32,9 @@ public class BosKarakter : MonoBehaviour
             {
                 MaterialDegistirVeAnimasyonTetikle();
                 carpti = true;
-            }            
+                GetComponent<AudioSource>().Play();
+
+            }
         }
         else if (other.CompareTag("igneliKutu") || other.CompareTag("Testere") || other.CompareTag("PervaneIgneleri"))
         {

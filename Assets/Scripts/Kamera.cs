@@ -14,7 +14,6 @@ public class Kamera : MonoBehaviour
         target_offset = transform.position - target.position;
     }
 
-    // Update is called once per frame
     private void LateUpdate()
     {
         if (!kameraSonaGeldiMi)

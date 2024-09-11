@@ -30,7 +30,7 @@ public class Alt_karakter : MonoBehaviour
         {
             gameManager.YokOlmaEfektiOlustur(PozisyonVer());
             gameObject.SetActive(false);
-        }        
+        }
         if (other.CompareTag("Balyoz"))
         {
             gameManager.YokOlmaEfektiOlustur(PozisyonVer(), true);
@@ -38,7 +38,7 @@ public class Alt_karakter : MonoBehaviour
         }
         if (other.CompareTag("Dusman"))
         {
-            gameManager.YokOlmaEfektiOlustur(PozisyonVer(),false,false);
+            gameManager.YokOlmaEfektiOlustur(PozisyonVer(), false, false);
             gameObject.SetActive(false);
         }
     }

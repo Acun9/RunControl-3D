@@ -32,7 +32,7 @@ public class Dusman : MonoBehaviour
         if (other.CompareTag("AltKarakter"))
         {
             Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            gameManager.YokOlmaEfektiOlustur(yeniPoz,false,true);
+            gameManager.YokOlmaEfektiOlustur(yeniPoz, false, true);
             gameObject.SetActive(false);
         }
     }

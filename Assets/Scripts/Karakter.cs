@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Karakter : MonoBehaviour
 {
@@ -8,6 +9,14 @@ public class Karakter : MonoBehaviour
     public Kamera kamera;
     public bool karakterSonaGeldiMi;
     public GameObject karakterinGidecegiYer;
+    public Slider slider;
+    public GameObject gecisNoktasi;
+
+    private void Start()
+    {
+        float fark = Vector3.Distance(transform.position, gecisNoktasi.transform.position);
+        slider.maxValue = fark;
+    }
 
     private void FixedUpdate()
     {
@@ -20,10 +29,15 @@ public class Karakter : MonoBehaviour
         if (karakterSonaGeldiMi)
         {
             transform.position = Vector3.Lerp(transform.position, karakterinGidecegiYer.transform.position, .015f);
-
+            if (slider.value != 0)
+            slider.value -= .005f;
+            
         }
         else
         {
+            float fark = Vector3.Distance(transform.position, gecisNoktasi.transform.position);
+            slider.value = fark;
+
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 if (Input.GetAxis("Mouse X") < 0)

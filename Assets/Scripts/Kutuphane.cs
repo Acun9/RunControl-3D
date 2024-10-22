@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Acun
 {
-    public class Matematik›slemleri : MonoBehaviour
+    public class Matematik›slemleri
     {
-        public static void Carpma(int gelenSayi, List<GameObject> Karakterler, List<GameObject> OlusmaEfektleri, Transform pozisyon)
+        public void Carpma(int gelenSayi, List<GameObject> Karakterler, List<GameObject> OlusmaEfektleri, Transform pozisyon)
         {
             int donguSayisi = (GameManager.AnlikKarakterSayisi * gelenSayi) - GameManager.AnlikKarakterSayisi;
             int sayi = 0;
@@ -42,7 +42,7 @@ namespace Acun
             Debug.Log(GameManager.AnlikKarakterSayisi);
 
         }
-        public static void Toplama(int gelenSayi, List<GameObject> Karakterler, List<GameObject> OlusmaEfektleri, Transform pozisyon)
+        public void Toplama(int gelenSayi, List<GameObject> Karakterler, List<GameObject> OlusmaEfektleri, Transform pozisyon)
         {
             int sayi = 0;
             foreach (var item in Karakterler)
@@ -77,7 +77,7 @@ namespace Acun
             Debug.Log(GameManager.AnlikKarakterSayisi);
 
         }
-        public static void Cikartma(int gelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
+        public void Cikartma(int gelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
         {
             if (GameManager.AnlikKarakterSayisi <= gelenSayi)
             {
@@ -142,7 +142,7 @@ namespace Acun
 
             }
         }
-        public static void Bolme(int gelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
+        public void Bolme(int gelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
         {
             if (GameManager.AnlikKarakterSayisi <= gelenSayi)
             {
@@ -205,6 +205,37 @@ namespace Acun
                 GameManager.AnlikKarakterSayisi -= donguSayisi;
                 Debug.Log(GameManager.AnlikKarakterSayisi);
             }
+        }
+    }
+
+    public class BellekYonetimi
+    {
+        public void VeriKaydet_string(string Key, string Value)
+        {
+            PlayerPrefs.SetString(Key, Value);
+            PlayerPrefs.Save();
+        }
+        public void VeriKaydet_int(string Key, int Value)
+        {
+            PlayerPrefs.SetInt(Key, Value);
+            PlayerPrefs.Save();
+        }
+        public void VeriKaydet_float(string Key, float Value)
+        {
+            PlayerPrefs.SetFloat(Key, Value);
+            PlayerPrefs.Save();
+        }
+        public string VeriOku_string(string Key)
+        {
+            return PlayerPrefs.GetString(Key);
+        }
+        public int VeriOku_int(string Key)
+        {
+            return PlayerPrefs.GetInt(Key);
+        }
+        public float VeriOku_float(string Key)
+        {
+            return PlayerPrefs.GetFloat(Key);
         }
     }
 

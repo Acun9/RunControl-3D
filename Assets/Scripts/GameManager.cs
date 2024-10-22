@@ -20,10 +20,13 @@ public class GameManager : MonoBehaviour
     public bool OyunBittiMi;
     bool karakterSonaGeldiMi;
 
-
+    Matematik›slemleri matematik›slemleri = new Matematik›slemleri();
+    BellekYonetimi bellekYonetimi = new BellekYonetimi();
     void Start()
     {
         DusmanOlustur();
+        Debug.Log(bellekYonetimi.VeriOku_int("Puan"));
+
     }
     public void DusmanOlustur()
     {
@@ -75,7 +78,16 @@ public class GameManager : MonoBehaviour
 
                 if (AnlikKarakterSayisi > DusmanSayisi)
                 {
+                    if (AnlikKarakterSayisi > 5)
+                    {
+                        bellekYonetimi.VeriKaydet_int("Puan", bellekYonetimi.VeriOku_int("Puan") + 600);
+                    }
+                    else
+                    {
+                        bellekYonetimi.VeriKaydet_int("Puan", bellekYonetimi.VeriOku_int("Puan") + 200);
+                    }
                     Debug.Log("Kazandin.");
+                    Debug.Log(bellekYonetimi.VeriOku_int("Puan"));
                 }
                 else
                 {
@@ -91,19 +103,19 @@ public class GameManager : MonoBehaviour
         switch (islemTuru)
         {
             case "Carpma":
-                Matematik›slemleri.Carpma(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);
+                matematik›slemleri.Carpma(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);
                 break;
 
             case "Toplama":
-                Matematik›slemleri.Toplama(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);
+                matematik›slemleri.Toplama(gelenSayi, Karakterler, OlusmaEfektleri, pozisyon);
                 break;
 
             case "Cikartma":
-                Matematik›slemleri.Cikartma(gelenSayi, Karakterler, YokOlmaEfektleri);
+                matematik›slemleri.Cikartma(gelenSayi, Karakterler, YokOlmaEfektleri);
                 break;
 
             case "Bolme":
-                Matematik›slemleri.Bolme(gelenSayi, Karakterler, YokOlmaEfektleri);
+                matematik›slemleri.Bolme(gelenSayi, Karakterler, YokOlmaEfektleri);
                 break;
         }
     }
